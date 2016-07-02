@@ -1,6 +1,6 @@
 jvforum:
   image: wonderfall/jvforum
-  container_name: wonderfall/jvforum
+  container_name: jvforum
   links:
     - db_jvforum:db_jvforum
   environment:
