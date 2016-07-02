@@ -1,0 +1,24 @@
+jvforum:
+  image: jvforum
+  container_name: wonderfall/jvforum
+  links:
+    - db_jvforum:db_jvforum
+  environment:
+    - UID=1000
+    - GID=1000
+    - COOKIES_SECRET=secret
+    - DB_HOST=db_jvforum
+    - DB_USER=jvforum
+    - DB_PASSWORD=onche
+    - DATABASE=jvforum
+
+db_jvforum:
+  image: mariadb:10
+  container_name: db_jvforum
+  volumes:
+    - ./jvforum/db:/var/lib/mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=supermotdepasse
+    - MYSQL_DATABASE=jvforum
+    - MYSQL_USER=jvforum
+    - MYSQL_PASSWORD=onche
