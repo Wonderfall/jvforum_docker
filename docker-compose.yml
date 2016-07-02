@@ -1,5 +1,5 @@
 jvforum:
-  image: jvforum
+  image: wonderfall/jvforum
   container_name: wonderfall/jvforum
   links:
     - db_jvforum:db_jvforum
