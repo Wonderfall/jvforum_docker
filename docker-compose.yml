@@ -1,6 +1,7 @@
 jvforum:
   image: wonderfall/jvforum
   container_name: jvforum
+  restart: always
   links:
     - db_jvforum:db_jvforum
   environment:
